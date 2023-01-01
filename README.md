@@ -1,5 +1,4 @@
-https://img.shields.io/github/license/tarakaprabhuchinta/github-merged-branch-remover?style=for-the-badge
-[![Go Report Card](https://goreportcard.com/badge/github.com/tarakaprabhuchinta/github-merged-branch-remover)](https://goreportcard.com/report/github.com/tarakaprabhuchinta/github-merged-branch-remover) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tarakaprabhuchinta_github-merged-branch-remover&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=tarakaprabhuchinta_github-merged-branch-remover)
+![GitHub](https://img.shields.io/github/license/tarakaprabhuchinta/github-merged-branch-remover?style=for-the-badge) [![Go Report Card](https://goreportcard.com/badge/github.com/tarakaprabhuchinta/github-merged-branch-remover)](https://goreportcard.com/report/github.com/tarakaprabhuchinta/github-merged-branch-remover) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tarakaprabhuchinta_github-merged-branch-remover&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=tarakaprabhuchinta_github-merged-branch-remover)
 
 # github-merged-branch-remover
 Go code to check and remove merged branches in Gihub repositories in which merged branches has their commits more than 10 days ago.
