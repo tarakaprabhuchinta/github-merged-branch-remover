@@ -12,10 +12,18 @@ A Github token is needed to run this code. The token needs to have read and writ
 
  ```
 
-## Run the code using the below command
+## Run the code
 
 ```
 
 go run main.go json-decode.go <owner/organization-name> <repo-name>
+
+```
+
+## Add this code as go module
+
+```
+
+go get github.com/tarakaprabhuchinta/github-merged-branch-remover@v1.0.0
 
 ```
