@@ -7,6 +7,7 @@ Go code to check and remove merged branches in Gihub repositories in which merge
 A Github token is needed to run this code. The token needs to have read and write permissions to the repo.
 
 ```
+
  export GITHUB_TOKEN=<your-token>
 
  ```
@@ -14,6 +15,7 @@ A Github token is needed to run this code. The token needs to have read and writ
 ## Run the code using the below command
 
 ```
+
 go run main.go json-decode.go <owner/organization-name> <repo-name>
 
 ```
