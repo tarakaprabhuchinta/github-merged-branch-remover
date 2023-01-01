@@ -11,4 +11,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Report a vulnerability by creating issue in this repo.
+Report a vulnerability by sending details of vulnerability to cvstarak@gmail.com. You can expect a response in about 48 to 72 hours.
