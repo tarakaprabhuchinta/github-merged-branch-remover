@@ -83,12 +83,11 @@ func CheckIfBranchHasOpenPullRequests(url string, owner string, branch string, t
 
 func LastCommitTimeOfBranchInDays(url string, branch string, token string) int {
 	body := SendRequest(url+"/commits/heads/"+branch, "GET", token)
-	fmt.Println()
 	t, err := time.Parse(time.RFC3339, DecodeLastCommitTime(body))
 	if err != nil {
 		fmt.Println(err)
 	}
-
+	// print(branch + "has last commit in " + strconv.Itoa(int(time.Since(t).Hours()/24)) + " days")
 	// Calculate the difference between the current date and the specific date in days
 	return int(time.Since(t).Hours() / 24)
 
@@ -113,9 +112,13 @@ func RefineBranchList(bl map[string]string, url string, token string, owner stri
 			rl[k] = v
 		}
 	}
-	fmt.Println("List of branches which are about to be deleted are as follows...")
-	for k := range rl {
-		fmt.Println(k)
+
+	// Only display branches if refined list is not empty
+	if len(rl) > 0 {
+		fmt.Println("List of branches which are about to be deleted are as follows...")
+		for k := range rl {
+			fmt.Println(k)
+		}
 	}
 	for k, v := range rl {
 		fmt.Println(url + "git/refs/heads/" + k)
