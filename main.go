@@ -70,10 +70,6 @@ func GetDefaultBranch(url string, token string) string {
 }
 
 func CheckIfBranchHasOpenPullRequests(url string, owner string, branch string, token string) bool {
-	// This function is limited by the Github API. Github API lets you filter
-	// requests by head user or head organization when listing pull requests.
-	// This function may fail, if you are trying to list PR's created by
-	// another user
 	body := SendRequest(url+"/pulls?head="+owner+":"+branch, "GET", token)
 	// api returns '[]' string if branch has no open pr's.
 	// so string length is checked for 2 characters and it returns 2
