@@ -24,7 +24,7 @@ go run main.go json-decode.go <owner/organization-name> <repo-name>
 
 ```
 
-go get github.com/tarakaprabhuchinta/github-merged-branch-remover@v1.1.0
+go get github.com/tarakaprabhuchinta/github-merged-branch-remover@v1.0.1
 
 ```
 
@@ -32,7 +32,7 @@ go get github.com/tarakaprabhuchinta/github-merged-branch-remover@v1.1.0
 
 ```
 
-docker build . -t github-merged-branch-remover:1.1.0
+docker build . -t github-merged-branch-remover:1.0.1
 
 ```
 
@@ -55,6 +55,6 @@ export GITHUB_TOKEN=<github-token>
 ## Run the docker image
 
 ```
-docker run -e GITHUB_TOKEN=$GITHUB_TOKEN github-merged-branch-remover:1.1.0 <owner-name> <repo-name>
+docker run -e GITHUB_TOKEN=$GITHUB_TOKEN github-merged-branch-remover:1.0.1 <owner-name> <repo-name>
 
 ````
