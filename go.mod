@@ -1,3 +1,3 @@
-module github.com/tarakaprabhuchinta/github-merged-branch-remover/v1.0.1
+module github.com/tarakaprabhuchinta/github-merged-branch-remover
 
 go 1.19
