@@ -27,3 +27,34 @@ go run main.go json-decode.go <owner/organization-name> <repo-name>
 go get github.com/tarakaprabhuchinta/github-merged-branch-remover@v1.0.0
 
 ```
+
+## Build the Docker file 
+
+```
+
+docker build . -t github-merged-branch-remover:1.0.2
+
+```
+
+To view the output when building Dockerfile
+
+```
+
+docker build . --progress plain --no-cache
+
+```
+
+Export Github token as environment variable
+
+```
+
+export GITHUB_TOKEN=<github-token>
+
+```
+
+## Run the docker image
+
+```
+docker run -e GITHUB_TOKEN=$GITHUB_TOKEN github-merged-branch-remover:1.0.2 <owner-name> <repo-name>
+
+````
