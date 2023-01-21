@@ -20,11 +20,11 @@ go run main.go json-decode.go <owner/organization-name> <repo-name>
 
 ```
 
-## Add this code as go module
+## Get this project as go module
 
 ```
 
-go get github.com/tarakaprabhuchinta/github-merged-branch-remover@v1.0.0
+go get github.com/tarakaprabhuchinta/github-merged-branch-remover@v1.0.2
 
 ```
 
