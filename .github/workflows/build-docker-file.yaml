@@ -1,0 +1,25 @@
+name: "Build Docker File"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main" ]
+  workflow_dispatch:  
+
+jobs:
+  build and run:
+    name: Build and Run Docker File
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Build Docker File
+    - name: Build Docker File
+      run: | 
+        docker build . --progress plain --no-cache -t github-merged-branch-remover
+        docker run -e GITHUB_TOKEN=$GITHUB_TOKEN github-merged-branch-remover
+      
