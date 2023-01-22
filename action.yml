@@ -1,0 +1,21 @@
+# action.yml
+name: 'Github Merged Branch Remover'
+description: 'Remove merged branches in Github repository 
+    which are more than 10 days old'
+inputs:
+  organization:  
+    description: 'Enter the organization name to which the repo belongs to'
+    required: true
+  repository:  
+    description: 'Enter the repository name'
+    required: true
+  github-token:  
+    description: 'Enter your Github token'
+    required: true  
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.organization }}
+    - ${{ inputs.repository }}
+    - ${{ inputs.github-token }}
