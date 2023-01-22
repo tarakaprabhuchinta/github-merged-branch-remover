@@ -10,5 +10,4 @@ RUN go mod verify
 COPY . .
 RUN go build -v -o ./gt-branch-remover ./...
 
-RUN cp ./gt-branch-remover ../gt-branch-remover
-ENTRYPOINT [ "./gt-branch-remover" ]
+ENTRYPOINT [ "gt-branch-remover" ]
