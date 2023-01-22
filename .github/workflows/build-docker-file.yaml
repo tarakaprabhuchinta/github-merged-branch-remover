@@ -9,8 +9,8 @@ on:
   workflow_dispatch:  
 
 jobs:
-  build and run:
-    name: Build and Run Docker File
+  build:
+    name: Build Docker File
     runs-on: ubuntu-latest
 
     steps:
