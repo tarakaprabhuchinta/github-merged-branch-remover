@@ -11,16 +11,28 @@ import (
 func main() {
 	token, ok := os.LookupEnv("GITHUB_TOKEN")
 	if !ok {
-		fmt.Printf("Github token not set")
+		fmt.Printf("Github token not set via environment variable")
 	}
 	base_url := "https://api.github.com/repos/"
-	// pass github owner and github repo as command line arguments
-	if len(os.Args) != 3 {
+
+	// Checks if Github token is set and owner, repo names are entered
+	if len(token) > 0 && len(os.Args) != 3 {
 		panic("Enter Github owner and repo. " +
 			"Make sure not to have any spaces in between...")
 	}
+
+	// Check if Github token is not entered via environment
+	// variable or command line argument
+	if token == "" && len(os.Args) != 4 {
+		panic("Set Github token as environment variable or " +
+			"pass it as command line argument")
+	}
 	github_owner := os.Args[1]
 	gibhub_repo := os.Args[2]
+
+	if token == "" {
+		token = os.Args[3]
+	}
 	url := base_url + github_owner + "/" + gibhub_repo
 	unrefined_branch_list := ListBranches(url, token)
 	RefineBranchList(unrefined_branch_list, url, token, github_owner)
