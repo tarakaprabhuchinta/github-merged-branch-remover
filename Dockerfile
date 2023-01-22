@@ -9,6 +9,6 @@ RUN go mod verify
 
 COPY . .
 RUN go build -v -o ./gt-branch-remover ./...
-RUN pwd
-RUN ls
+
+RUN cp ./gt-branch-remover ../gt-branch-remover
 ENTRYPOINT [ "./gt-branch-remover" ]
