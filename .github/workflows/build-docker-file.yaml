@@ -21,5 +21,4 @@ jobs:
     - name: Build Docker File
       run: | 
         docker build . --progress plain --no-cache -t github-merged-branch-remover
-        docker run github-merged-branch-remover tarakaprabhuchinta azure-infra-flux-apps ${{ secrets.TOKEN }}
       
