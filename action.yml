@@ -2,6 +2,10 @@
 name: 'Github Merged Branch Remover'
 description: 'Remove merged branches in Github repository 
     which are more than 10 days old'
+author: Vijay Chinta
+branding:
+  icon: delete
+  color: white
 inputs:
   organization:  
     description: 'Enter the organization name to which the repo belongs to'
