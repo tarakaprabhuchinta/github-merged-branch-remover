@@ -11,7 +11,8 @@ import (
 func main() {
 	token, ok := os.LookupEnv("GITHUB_TOKEN")
 	if !ok {
-		fmt.Printf("Github token not set via environment variable")
+		fmt.Printf("Github token not set via environment variable" +
+			"Setting token via command line argument")
 	}
 	base_url := "https://api.github.com/repos/"
 
