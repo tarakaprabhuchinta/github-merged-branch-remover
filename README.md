@@ -20,19 +20,11 @@ go run main.go json-decode.go <owner/organization-name> <repo-name>
 
 ```
 
-## Get this project as go module
-
-```
-
-go get github.com/tarakaprabhuchinta/github-merged-branch-remover@v3.0.0
-
-```
-
 ## Build the Docker file 
 
 ```
 
-docker build . -t github-merged-branch-remover:3.0.0
+docker build . -t github-merged-branch-remover:<tag>
 
 ```
 
@@ -55,13 +47,13 @@ export GITHUB_TOKEN=<github-token>
 ## Run the docker image
 
 ```
-docker run -e GITHUB_TOKEN=$GITHUB_TOKEN github-merged-branch-remover:3.0.0 <owner-name> <repo-name>
+docker run -e GITHUB_TOKEN=$GITHUB_TOKEN github-merged-branch-remover:<tag> <owner-name> <repo-name>
 
 ````
 
 Its also possible to pass the Github token as third argument
 
 ```
-docker run -e GITHUB_TOKEN=$GITHUB_TOKEN github-merged-branch-remover:3.0.0 <owner-name> <repo-name> <github-token>
+docker run -e GITHUB_TOKEN=$GITHUB_TOKEN github-merged-branch-remover:<tag> <owner-name> <repo-name> <github-token>
 
 ````
